@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container m-5 text-center">
+
+    <img class="rounded mx-auto d-block pf-img" src="{{ pet.photo_url }}" alt="">
+    <h2>{{ pet.name }}</h2>
+    <p>Species:  {{ pet.species }}</p>
+    <p>Age:  {{ pet.age }}</p>
+    <br>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {% for field in form 
+            if field.widget.input_type != 'hidden' %}
+        <p>
+            {{ field.label }}
+            {{ field }}
+    
+            {% for err in field.errors %}
+            {{ err }}
+            {% endfor %}
+        </p>
+        {% endfor %}
+    
+        <button>Save</button>
+    </form>
+
+</div>
+
+{% endblock %}

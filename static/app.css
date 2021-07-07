@@ -1,3 +1,7 @@
-.pet-img {
-    width: 100px;
+/* .pet-img {
+    width: 200px;
+} */
+
+.pf-img {
+    max-width: 400px;
 }

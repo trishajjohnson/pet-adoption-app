@@ -29,6 +29,6 @@ class Pet(db.Model):
     photo_url = db.Column(db.Text, nullable=True, default=DEFAULT_IMAGE_URL)
     age = db.Column(db.Integer, nullable=True)
     notes = db.Column(db.Text, nullable=True)
-    available = db.Column(db.Boolean, nullable=True, default=True)
+    available = db.Column(db.Boolean, nullable=False, default=True)
 
 
